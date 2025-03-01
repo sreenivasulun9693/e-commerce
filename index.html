@@ -6,428 +6,7 @@
 	<title>Responsive Product Design</title>
 	<link rel="shortcut icon" href="image/logo.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-	<style>
-	@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans&display=swap');
-
-*{
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-}
-section{
-    width: 100%;
-    height: 100vh;
-    background-position: center;
-}
-h2{
-	background: linear-gradient(to left, #c72092 , #6c14d0);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-section nav{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    box-shadow: 0 0 8px rgba(0,0,0,0.6);
-    background: rgb(245, 241, 241);
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 100;
-}
-
-section nav .logo{
-    font-size: 35px;
-    color: #c72092;
-    margin: 5px 0;
-    cursor: pointer;
-    position: relative;
-    left: -4%;
-}
-
-section nav .logo span{
-    color: #6c14d0;
-    text-decoration: underline;
-}
-
-section nav ul{
-    list-style: none;
-}
-
-section nav ul li{
-    display: inline-block;
-    margin: 5px 15px;
-}
-
-section nav ul li a{
-    text-decoration: none;
-    color: black;
-    transition: 0.2s;
-}
-
-section nav ul li a:hover{
-    color: #c72092;
-}
-
-
-
-body{
-	font-size: 1.7rem;
-	font-family: 'Merriweather Sans', sans-serif;
-	background: #e4e5e7;
-	color: #ececec;
-	padding: 4rem;
-}
-
-h2{
-	text-align: center;
-	margin-bottom: 5rem;
-	font-size: 4rem;
-	color:#21201e;
-}
-.division1{
-	margin-top:-100px;
-}
-.division{
-	margin-top: -270px;
-}
-.division2{
-	margin-top:-200px;
-}
-.division3{
-	margin-top: -350px;
-}
-.division4{
-	margin-top:-600px;
-}
-.all-products{
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-wrap: wrap;
-	margin:0px 20px;
-}
-
-.product{
-	overflow: hidden;
-	background: #ffffff;
-	color: #21201e;
-	text-align: center;
-	width: 240px;
-	height: 400px;
-	padding: 2rem;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	border-radius: 1.2rem;
-	margin:40px 30px;
-	
-}
-
-.product .product-title, .product .product-price{
-	font-size: 18px;
-}
-
-.product:hover img{
-	scale:  1.1;
-}
-
-.product:hover {
-	box-shadow: 0 0 15px #b024a9;
-}
-
-.product img {
-	height: 200px;
-	margin: 1rem;
-	transition: all 0.3s;
-}
-
-.product a:link, .product a:visited{
-	color: #ececec;
-	display: inline-block;
-	text-decoration: none;
-	background-color: #2c3e50;
-	padding: 1.2rem 3rem;
-	border-radius: 1rem;
-	margin-top: 1rem;
-	font-size: 14px;
-	transition: all 0.2s;
-}
-
-.product a:hover{
-	transform: scale(1.1);
-}
-
-.review{
-    width: 100%;
-    height: 100vh;
-    padding-top: 80px;
-}
-
-.review h1{
-    font-size: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 30px;
-    text-transform: uppercase;
-	color:#b024a9;
-}
-
-.review h1 span{
-    background: linear-gradient(to left, #c72092 , #6c14d0);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    margin-left: 15px;   
-	 
-}
-
-.review .review_box{
-    width: 95%;
-    position: relative;
-    top: 7%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
-}
-
-.review .profile .profile_image{
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    overflow: hidden;
-    margin: 5px 0;
-    box-shadow: 0 0 10px rgba(0,0,0,0.5);
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.review .profile .profile_image:hover{
-    transform: scale(1.2);
-}
-
-.review .profile_image img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-}
-
-.review .profile{
-    display: flex;
-    align-items: center;
-}
-
-.review .review_box .review_card{
-    width: 500px;
-    background: #f3f1f1;
-    padding: 20px 25px;
-    border-radius: 5px;
-    margin: 15px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.3);
-}
-
-.review .review_box .review_card .card_top{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.review .review_box .review_card .card_top .profile .name{
-    margin-left: 20px;
-    line-height: 22px;
-}
-
-.review .review_box .review_card .card_top .profile .name strong{
-    font-size: 20px;
-	color:#b024a9;
-}
-
-.review .review_box .review_card .card_top .profile .name .like i{
-    color: orange;
-    display: inline-block;
-    font-size: 5px;
-}
-
-.review .review_box .review_card .comment p{
-    text-align: justify;
-    line-height: 22px;
-    margin-top: 15px;
-	color:#646063;
-	font-family: 'Times New Roman', Times, serif;
-	font-size: 17px;
-}
-.services{
-    width: 70%;
-    margin: 0 auto;
-    text-align: center;
-    padding: 80px 0 10px 0;
-}
-
-.services h1{
-    font-size: 60px;
-    text-transform: uppercase;
-	color:#b024a9;
-}
-
-.services h1 span{
-    margin-left: 15px;
-    background: linear-gradient(to left, #c72092 , #6c14d0);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;    
-}
-
-.services .services_cards{
-    width: 80%;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: relative;
-    top: 50px;
-}
-
-.services .services_box i{
-    font-size: 60px;
-    color: orange;
-    margin: 20px 0;
-    cursor: pointer;
-}
-
-.services .services_box h3{
-    margin-bottom: 12px;
-    font-size: 19px;
-	color:#b024a9;
-}
-
-.services .services_box p{
-    text-align: center;
-    color: #919191;
-    margin-bottom: 60px;
-}
-
-
-
-
-footer{
-    width: 100%;
-}
-
-footer .footer_main{
-    width: 100%;
-    background: #f3f1f1;
-    display: flex;
-    justify-content: space-around;
-}
-
-footer .footer_main .tag{
-    margin: 10px 0;
-}
-
-footer .footer_main .tag .center{
-    text-align: center;
-}
-
-footer .footer_main .tag h1{
-    font-size: 25px;
-    margin: 25px 0;
-    color: #1c0080;
-}
-
-footer .footer_main .tag a{
-    display: block;
-    color: black;
-    text-decoration: none;
-    margin: 9px 0;
-}
-
-footer .footer_main .tag a i{
-    padding: 0 10px;
-    transition: 0.3;
-}
-
-footer .footer_main .tag a i:hover{
-    color: #c72092;
-}
-
-footer .footer_main .tag .social_link{
-    display: flex;
-}
-
-footer .footer_main .tag .social_link a{
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    text-align: center;
-    text-decoration: none;
-    color: black;
-    box-shadow: 0 0 20px 10px rgba(0,0,0,0.05);
-    position: relative;
-    margin: 0 5px;
-    z-index: 10;
-    overflow: hidden;
-}
-
-footer .footer_main .tag .social_link a .fa-brands{
-    font-size: 15px;
-    line-height: 30px;
-    z-index: 10;
-    position: relative;
-    transition: 0.5s;
-}
-
-footer .footer_main .tag .social_link a:hover i{
-    color: white;
-}
-
-footer .footer_main .tag .social_link a::after{
-    content: '';
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: -90px;
-    background: linear-gradient(-45deg, #c72092 , #6c14d0);
-    position: absolute;
-    z-index: -10;
-    transition: 0.5s;
-}
-
-footer .footer_main .tag .social_link a:hover::after{
-    left: 0;
-}
-
-footer .footer_main .tag .search_bar{
-    width: 230px;
-    height: 30px;
-    background: rgb(202, 202, 202);
-    border-radius: 25px;
-}
-
-footer .footer_main .tag .search_bar input{
-    width: 200px;
-    padding: 2px 0;
-    position: relative;
-    top: 17%;
-    left: 6%;
-    border: none;
-    background: none;
-    outline: none;
-    font-size: 13px;
-}
-
-footer .footer_main .tag .search_bar button{
-    padding: 7px 15px;
-    background: linear-gradient(to right, #c72092 , #6c14d0);
-    border: none;
-    margin-top: 15px;
-    border-radius: 25px;
-    color: white;
-    cursor: pointer;
-}
-</style>
+	<link rel="stylesheet" href="style.css">
 </head>
 <body>
 	
@@ -437,7 +16,7 @@ footer .footer_main .tag .search_bar button{
                 <h1>Ecommer<span>ce</span></h1>
             </div>
 
-            <ul>
+            <ul class="nav-links">
                 <li><a href="#Home">Home</a></li>
                 <li><a href="#Products">Products</a></li>
                 <li><a href="#About">About</a></li>
@@ -448,621 +27,284 @@ footer .footer_main .tag .search_bar button{
             <div class="icons">
                 <i class="fa-solid fa-cart-shopping"></i>
             </div>
+            
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
         </nav>
 	</section>
 
-<section class="division4">
-	<img src="C:\Users\DELL\Downloads\store.jpg" width="100%" height="80%">
-</section>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Shop the Latest Trends</h1>
+            <p>Discover amazing products at great prices</p>
+            <a href="#Products" class="cta-button">Shop Now</a>
+        </div>
+    </section>
 
-
-	<section class="products">
+	<section class="products" id="Products">
 		<h2>Electronic Devices</h2>
 		<div class="all-products">
 			<div class="product">
-				<img src="C:\Users\DELL\Downloads\watch.jfif    ">
+				<img src="https://images.unsplash.com/photo-1579586337278-3befd40fd17a?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="Smart Watch">
 				<div class="product-info">
-					<h4 class="product-title">Smart Watch 12pro
-					</h4>
+					<h4 class="product-title">Smart Watch 12pro</h4>
 					<p class="product-price">$129</p>
 					<a class="product-btn" href="#">Buy Now</a>
-
 				</div>
 			</div>
 			<div class="product">
-				<img src="C:\Users\DELL\Downloads\lap.jfif">
+				<img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="Dell Laptop">
 				<div class="product-info">
-					<h4 class="product-title">Dell laptop
-					</h4>
+					<h4 class="product-title">Dell laptop</h4>
 					<p class="product-price">$299</p>
 					<a class="product-btn" href="#">Buy Now</a>
-
 				</div>
 			</div>
 			<div class="product">
-				<img src="C:\Users\DELL\Downloads\phone.jpg">
+				<img src="https://images.unsplash.com/photo-1556656793-08538906a9f8?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="iPhone">
 				<div class="product-info">
-					<h4 class="product-title">iPhone 14
-					</h4>
+					<h4 class="product-title">iPhone 14</h4>
 					<p class="product-price">$999</p>
 					<a class="product-btn" href="#">Buy Now</a>
-
 				</div>
 			</div>
 			<div class="product">
-				<img src="C:\Users\DELL\Downloads\ac.jfif" width="150%">
+				<img src="https://images.unsplash.com/photo-1581275263844-2a9b6e9ea1e7?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="Air Conditioner">
 				<div class="product-info">
-					<h4 class="product-title">Air Conditioner
-						</h4>
-					<p class="product-price">$629*</p>
+					<h4 class="product-title">Air Conditioner</h4>
+					<p class="product-price">$629</p>
 					<a class="product-btn" href="#">Buy Now</a>
-
 				</div>
 			</div>
 		</div>
 	</section>
 
-<div class="division1">
     <section class="products">
 		<div class="all-products">
 			<div class="product">
-				<img src="C:\Users\DELL\Downloads\watch4.jfif">
-				<div class="product-info">Apple Watch
-					<h4 class="product-title">
-					</h4>
+				<img src="https://images.unsplash.com/photo-1542496658-e33a6d0d50f6?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="Apple Watch">
+				<div class="product-info">
+					<h4 class="product-title">Apple Watch</h4>
 					<p class="product-price">$129</p>
 					<a class="product-btn" href="#">Buy Now</a>
-
 				</div>
 			</div>
 			<div class="product">
-				<img src="C:\Users\DELL\Downloads\lap2.jfif">
+				<img src="https://images.unsplash.com/photo-1593642702821-c8da6771f0c6?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="HP Laptop">
 				<div class="product-info">
-					<h4 class="product-title">Hp Laptop
-					</h4>
+					<h4 class="product-title">Hp Laptop</h4>
 					<p class="product-price">$299</p>
 					<a class="product-btn" href="#">Buy Now</a>
-
 				</div>
 			</div>
 			<div class="product">
-				<img src="C:\Users\DELL\Downloads\phone2.jfif">
+				<img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="Techno Phone">
 				<div class="product-info">
-					<h4 class="product-title">Techno Camon 19
-					</h4>
+					<h4 class="product-title">Techno Camon 19</h4>
 					<p class="product-price">$999</p>
 					<a class="product-btn" href="#">Buy Now</a>
-
 				</div>
 			</div>
 			<div class="product">
-				<img src="C:\Users\DELL\Downloads\ac2.jfif">
+				<img src="https://images.unsplash.com/photo-1581275263844-2a9b6e9ea1e7?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="Air Conditioner">
 				<div class="product-info">
-					<h4 class="product-title">Air Conditioner
-						</h4>
-					<p class="product-price">$629*</p>
+					<h4 class="product-title">Air Conditioner</h4>
+					<p class="product-price">$629</p>
 					<a class="product-btn" href="#">Buy Now</a>
-
 				</div>
 			</div>
 		</div>
 	</section>
-</div>
-<div class="division2">
-    <h2>Clothing</h2>
+
     <section class="products">
-		<div class="all-products">
-			<div class="product">
-				<img src="C:\Users\DELL\Downloads\ton.jfif">
-				<div class="product-info">
-					<h4 class="product-title">Roadstar Ton Jeans
-					</h4>
-					<p class="product-price">$1129</p>
-					<a class="product-btn" href="#">Buy Now</a>
+        <h2>Clothing</h2>
+        <div class="all-products">
+            <div class="product">
+                <img src="https://images.unsplash.com/photo-1542272604-787c3835535d?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="Jeans">
+                <div class="product-info">
+                    <h4 class="product-title">Roadstar Ton Jeans</h4>
+                    <p class="product-price">$129</p>
+                    <a class="product-btn" href="#">Buy Now</a>
+                </div>
+            </div>
+            <div class="product">
+                <img src="https://images.unsplash.com/photo-1596755094514-f87e34085b2c?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="Shirt">
+                <div class="product-info">
+                    <h4 class="product-title">Wrogan Maroon Shirt</h4>
+                    <p class="product-price">$99</p>
+                    <a class="product-btn" href="#">Buy Now</a>
+                </div>
+            </div>
+            <div class="product">
+                <img src="https://images.unsplash.com/photo-1576566588028-4147f3842f27?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="T-shirt">
+                <div class="product-info">
+                    <h4 class="product-title">RRR T-Shirt</h4>
+                    <p class="product-price">$49</p>
+                    <a class="product-btn" href="#">Buy Now</a>
+                </div>
+            </div>
+            <div class="product">
+                <img src="https://images.unsplash.com/photo-1556821840-3a63f95609a7?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="Hoodie">
+                <div class="product-info">
+                    <h4 class="product-title">Roadstar Hoddie</h4>
+                    <p class="product-price">$89</p>
+                    <a class="product-btn" href="#">Buy Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-				</div>
-			</div>
-			<div class="product">
-				<img src="C:\Users\DELL\Downloads\shirt1.jfif">
-				<div class="product-info">
-					<h4 class="product-title">Wrogan Maroon Shirt
-					</h4>
-					<p class="product-price">$2299</p>
-					<a class="product-btn" href="#">Buy Now</a>
-
-				</div>
-			</div>
-			<div class="product">
-				<img src="C:\Users\DELL\Downloads\tshirt3.jfif">
-				<div class="product-info">
-					<h4 class="product-title">RRR T-Shirt
-					</h4>
-					<p class="product-price">$999</p>
-					<a class="product-btn" href="#">Buy Now</a>
-
-				</div>
-			</div>
-			<div class="product">
-				<img src="C:\Users\DELL\Downloads\hoodie.jfif">
-				<div class="product-info">
-					<h4 class="product-title">Roadstar Hoddie
-						</h4>
-					<p class="product-price">$829*</p>
-					<a class="product-btn" href="#">Buy Now</a>
-
-				</div>
-			</div>
-		</div>
-	</section>
-<div class="division">
     <section class="products">
-		<div class="all-products">
-			<div class="product">
-				<img src="C:\Users\DELL\Downloads\ton2.jfif">
-				<div class="product-info">
-					<h4 class="product-title">HighLander Ton Jeans
-					</h4>
-					<p class="product-price">$2129</p>
-					<a class="product-btn" href="#">Buy Now</a>
-
-				</div>
-			</div>
-			<div class="product">
-				<img src="C:\Users\DELL\Downloads\t shirt2.jfif">
-				<div class="product-info">
-					<h4 class="product-title">Red T-shirt
-					</h4>
-					<p class="product-price">$299</p>
-					<a class="product-btn" href="#">Buy Now</a>
-
-				</div>
-			</div>
-			<div class="product">
-				<img src="C:\Users\DELL\Downloads\hoodie2.jfif">
-				<div class="product-info">
-					<h4 class="product-title">Bear-House Hoddie
-					</h4>
-					<p class="product-price">$999</p>
-					<a class="product-btn" href="#">Buy Now</a>
-
-				</div>
-			</div>
-			<div class="product">
-				<img src="C:\Users\DELL\Downloads\boxer.jfif">
-				<div class="product-info">
-					<h4 class="product-title">Boxer Short
-						</h4>
-					<p class="product-price">$629*</p>
-					<a class="product-btn" href="#">Buy Now</a>
-
-				</div>
-			</div>
-		</div>
-	</section>
-</div></div>
-<div class="division2">
-    <h2>Footwear</h2>
-    <section class="products">
-		<div class="all-products">
-			<div class="product">
-				<img src="C:\Users\DELL\Downloads\foot1.jfif">
-				<div class="product-info">
-					<h4 class="product-title">Nike Shoes
-					</h4>
-					<p class="product-price">$929</p>
-					<a class="product-btn" href="#">Buy Now</a>
-
-				</div>
-			</div>
-			<div class="product">
-				<img src="C:\Users\DELL\Downloads\foot2.jfif">
-				<div class="product-info">
-					<h4 class="product-title">Girls sadles
-					</h4>
-					<p class="product-price">$799</p>
-					<a class="product-btn" href="#">Buy Now</a>
-
-				</div>
-			</div>
-			<div class="product">
-				<img src="C:\Users\DELL\Downloads\foot4.jfif">
-				<div class="product-info">
-					<h4 class="product-title">Adidas Shoes
-					</h4>
-					<p class="product-price">$999</p>
-					<a class="product-btn" href="#">Buy Now</a>
-
-				</div>
-			</div>
-			<div class="product">
-				<img src="C:\Users\DELL\Downloads\foot5.jfif">
-				<div class="product-info">
-					<h4 class="product-title">Women party Sandles
-						</h4>
-					<p class="product-price">$629*</p>
-					<a class="product-btn" href="#">Buy Now</a>
-
-				</div>
-			</div>
-		</div>
-	</section>
-<div class="division">
-    <section class="products">
-		<div class="all-products">
-			<div class="product">
-				<img src="C:\Users\DELL\Downloads\foot6.jfif">
-				<div class="product-info">
-					<h4 class="product-title">Men Party loofers
-					</h4>
-					<p class="product-price">$529</p>
-					<a class="product-btn" href="#">Buy Now</a>
-
-				</div>
-			</div>
-			<div class="product">
-				<img src="C:\Users\DELL\Downloads\foot7.jfif">
-				<div class="product-info">
-					<h4 class="product-title">Crocs
-					</h4>
-					<p class="product-price">$899</p>
-					<a class="product-btn" href="#">Buy Now</a>
-
-				</div>
-			</div>
-			<div class="product">
-				<img src="C:\Users\DELL\Downloads\foot8.jfif">
-				<div class="product-info">
-					<h4 class="product-title">Flip Flops
-					</h4>
-					<p class="product-price">$999</p>
-					<a class="product-btn" href="#">Buy Now</a>
-
-				</div>
-			</div>
-			<div class="product">
-				<img src="C:\Users\DELL\Downloads\foot3.jfif">
-				<div class="product-info">
-					<h4 class="product-title">Women Sandles
-						</h4>
-					<p class="product-price">$629*</p>
-					<a class="product-btn" href="#">Buy Now</a>
-
-				</div>
-			</div>
-		</div>
-	</section>
-</div>
-</div>
-<div class="division2">
-    <h2>Furniture</h2>
-    <section class="products">
-		<div class="all-products">
-			<div class="product">
-				<img src="C:\Users\DELL\Downloads\furni1.jfif">
-				<div class="product-info">
-					<h4 class="product-title">Wood Furniture
-					</h4>
-					<p class="product-price">$11129</p>
-					<a class="product-btn" href="#">Buy Now</a>
-
-				</div>
-			</div>
-			<div class="product">
-				<img src="C:\Users\DELL\Downloads\furni2.jfif">
-				<div class="product-info">
-					<h4 class="product-title">Chairs Furnitures
-					</h4>
-					<p class="product-price">$2099</p>
-					<a class="product-btn" href="#">Buy Now</a>
-
-				</div>
-			</div>
-			<div class="product">
-				<img src="C:\Users\DELL\Downloads\furni3.jfif">
-				<div class="product-info">
-					<h4 class="product-title">Bed Furniture chair
-					</h4>
-					<p class="product-price">$999</p>
-					<a class="product-btn" href="#">Buy Now</a>
-
-				</div>
-			</div>
-			<div class="product">
-				<img src="C:\Users\DELL\Downloads\furni4.jfif">
-				<div class="product-info">
-					<h4 class="product-title">Old age Chair
-						</h4>
-					<p class="product-price">$1629*</p>
-					<a class="product-btn" href="#">Buy Now</a>
-
-				</div>
-			</div>
-		</div>
-	</section>
-<div class="division">
-    <section class="products">
-		<div class="all-products">
-			<div class="product">
-				<img src="C:\Users\DELL\Downloads\furni5.jfif">
-				<div class="product-info">
-					<h4 class="product-title">Long Bed Chair
-					</h4>
-					<p class="product-price">$2129</p>
-					<a class="product-btn" href="#">Buy Now</a>
-
-				</div>
-			</div>
-			<div class="product">
-				<img src="C:\Users\DELL\Downloads\furni6.jfif">
-				<div class="product-info">
-					<h4 class="product-title">Smooth Bed Chair
-					</h4>
-					<p class="product-price">$2099</p>
-					<a class="product-btn" href="#">Buy Now</a>
-
-				</div>
-			</div>
-			<div class="product">
-				<img src="C:\Users\DELL\Downloads\furni7.jfif">
-				<div class="product-info">
-					<h4 class="product-title"> Small Daining Table
-					</h4>
-					<p class="product-price">$3999</p>
-					<a class="product-btn" href="#">Buy Now</a>
-
-				</div>
-			</div>
-			<div class="product">
-				<img src="C:\Users\DELL\Downloads\furni8.jfif">
-				<div class="product-info">
-					<h4 class="product-title">Hall bed Chair
-						</h4>
-					<p class="product-price">$1629*</p>
-					<a class="product-btn" href="#">Buy Now</a>
-
-				</div>
-			</div>
-		</div>
-	</section>
-</div>
-</div>
-
-<div class="division3">
-
-<div class="review" id="Review">
-	<h1>Customer's<span>review</span></h1>
-	
-	<div class="review_box">
-		<div class="review_card">
-			<div class="card_top">
-				<div class="profile">
-
-					<div class="profile_image">
-						<img src="C:\Users\DELL\Downloads\Shoes Websit\Shoes Websit\image\gir_dp2.jpg">
-					</div>
-
-					<div class="name">
-						<strong>Ranidi Lochana</strong>
-
-						<div class="like">
-							<i class="fa-solid fa-star"></i>
-							<i class="fa-solid fa-star"></i>
-							<i class="fa-solid fa-star"></i>
-							<i class="fa-solid fa-star"></i>
-							<i class="fa-solid fa-star-half-stroke"></i>
-						</div>
-					</div>
-
-				</div>
-			</div>
-			<div class="comment">
-				<p>
-					Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis, amet nesciunt voluptatem cum 
-					architecto ipsum vero nulla voluptatibus dolorum modi assumenda eum? Aliquid inventore velit ipsa 
-					repellat numquam atque dolores!
-				</p>
-			</div>
-		</div>   
-
-		<div class="review_card">
-			<div class="card_top">
-				<div class="profile">
-
-					<div class="profile_image">
-						<img src="C:\Users\DELL\Downloads\Shoes Websit\Shoes Websit\image\man_dp3.jpg">
-					</div>
-
-					<div class="name">
-						<strong>Sayuru Tharanga</strong>
-
-						<div class="like">
-							<i class="fa-solid fa-star"></i>
-							<i class="fa-solid fa-star"></i>
-							<i class="fa-solid fa-star"></i>
-							<i class="fa-solid fa-star-half-stroke"></i>
-							<i class="fa-regular fa-star"></i>
-						</div>
-					</div>
-
-				</div>
-			</div>
-			<div class="comment">
-				<p>
-					Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis, amet nesciunt voluptatem cum 
-					architecto ipsum vero nulla voluptatibus dolorum modi assumenda eum? Aliquid inventore velit ipsa 
-					repellat numquam atque dolores!
-				</p>
-			</div>
-		</div>   
-
-		<div class="review_card">
-			<div class="card_top">
-				<div class="profile">
-
-					<div class="profile_image">
-						<img src="C:\Users\DELL\Downloads\Shoes Websit\Shoes Websit\image\man_dp1.jpg">
-					</div>
-
-					<div class="name">
-						<strong>Senuda Dilwan</strong>
-
-						<div class="like">
-							<i class="fa-solid fa-star"></i>
-							<i class="fa-solid fa-star"></i>
-							<i class="fa-solid fa-star-half-stroke"></i>
-							<i class="fa-regular fa-star"></i>
-							<i class="fa-regular fa-star"></i>
-						</div>
-					</div>
-
-				</div>
-			</div>
-			<div class="comment">
-				<p>
-					Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis, amet nesciunt voluptatem cum 
-					architecto ipsum vero nulla voluptatibus dolorum modi assumenda eum? Aliquid inventore velit ipsa 
-					repellat numquam atque dolores!
-				</p>
-			</div>
-		</div>   
-
-	</div>
-
-	<div class="review_box">
-		<div class="review_card">
-			<div class="card_top">
-				<div class="profile">
-
-					<div class="profile_image">
-						<img src="C:\Users\DELL\Downloads\Shoes Websit\Shoes Websit\image\gir_dp3.jpg">
-					</div>
-
-					<div class="name">
-						<strong>Kaveesha Vidurangi</strong>
-
-						<div class="like">
-							<i class="fa-solid fa-star"></i>
-							<i class="fa-solid fa-star"></i>
-							<i class="fa-solid fa-star"></i>
-							<i class="fa-solid fa-star-half-stroke"></i>
-							<i class="fa-regular fa-star"></i>
-						</div>
-					</div>
-
-				</div>
-			</div>
-			<div class="comment">
-				<p>
-					Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis, amet nesciunt voluptatem cum 
-					architecto ipsum vero nulla voluptatibus dolorum modi assumenda eum? Aliquid inventore velit ipsa 
-					repellat numquam atque dolores!
-				</p>
-			</div>
-		</div>   
-
-		<div class="review_card">
-			<div class="card_top">
-				<div class="profile">
-
-					<div class="profile_image">
-						<img src="C:\Users\DELL\Downloads\Shoes Websit\Shoes Websit\image\girl_dp1.jpg">
-					</div>
-
-					<div class="name">
-						<strong>John Deo</strong>
-
-						<div class="like">
-							<i class="fa-solid fa-star"></i>
-							<i class="fa-solid fa-star"></i>
-							<i class="fa-solid fa-star"></i>
-							<i class="fa-solid fa-star"></i>
-							<i class="fa-solid fa-star-half-stroke"></i>
-						</div>
-					</div>
-
-				</div>
-			</div>
-			<div class="comment">
-				<p>
-					Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis, amet nesciunt voluptatem cum 
-					architecto ipsum vero nulla voluptatibus dolorum modi assumenda eum? Aliquid inventore velit ipsa 
-					repellat numquam atque dolores!
-				</p>
-			</div>
-		</div>   
-
-		<div class="review_card">
-			<div class="card_top">
-				<div class="profile">
-
-					<div class="profile_image">
-						<img src="C:\Users\DELL\Downloads\Shoes Websit\Shoes Websit\image\man_dp2.jpg">
-					</div>
-
-					<div class="name">
-						<strong>Charith Aruna</strong>
-
-						<div class="like">
-							<i class="fa-solid fa-star"></i>
-							<i class="fa-solid fa-star"></i>
-							<i class="fa-solid fa-star"></i>
-							<i class="fa-solid fa-star"></i>
-							<i class="fa-solid fa-star-half-stroke"></i>
-						</div>
-					</div>
-
-				</div>
-			</div>
-			<div class="comment">
-				<p>
-					Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis, amet nesciunt voluptatem cum 
-					architecto ipsum vero nulla voluptatibus dolorum modi assumenda eum? Aliquid inventore velit ipsa 
-					repellat numquam atque dolores!
-				</p>
-			</div>
-		</div>   
-
-	</div>
-
-</div>
-</div>
-
-
-<div class="services" id="Servises">
-	<h1>our<span>services</span></h1>
-
-	<div class="services_cards">
-		<div class="services_box">
-			<i class="fa-solid fa-truck-fast"></i>
-			<h3>Fast Delivery</h3>
-			<p>
-				Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-			</p>
-		</div>
-
-		<div class="services_box">
-			<i class="fa-solid fa-rotate-left"></i>
-			<h3>10 Days Replacement</h3>
-			<p>
-				Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-			</p>
-		</div>
-
-		<div class="services_box">
-			<i class="fa-solid fa-headset"></i>
-			<h3>24 x 7 Support</h3>
-			<p>
-				Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-			</p>
-		</div>
-	</div>
-
-</div>
-
-
-
-
-	<footer>
+        <h2>Footwear</h2>
+        <div class="all-products">
+            <div class="product">
+                <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="Nike Shoes">
+                <div class="product-info">
+                    <h4 class="product-title">Nike Shoes</h4>
+                    <p class="product-price">$129</p>
+                    <a class="product-btn" href="#">Buy Now</a>
+                </div>
+            </div>
+            <div class="product">
+                <img src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="Sandals">
+                <div class="product-info">
+                    <h4 class="product-title">Girls Sandals</h4>
+                    <p class="product-price">$79</p>
+                    <a class="product-btn" href="#">Buy Now</a>
+                </div>
+            </div>
+            <div class="product">
+                <img src="https://images.unsplash.com/photo-1608231387042-66d1773070a5?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="Adidas Shoes">
+                <div class="product-info">
+                    <h4 class="product-title">Adidas Shoes</h4>
+                    <p class="product-price">$149</p>
+                    <a class="product-btn" href="#">Buy Now</a>
+                </div>
+            </div>
+            <div class="product">
+                <img src="https://images.unsplash.com/photo-1562273138-f46be4ebdf33?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="Party Sandals">
+                <div class="product-info">
+                    <h4 class="product-title">Women Party Sandals</h4>
+                    <p class="product-price">$89</p>
+                    <a class="product-btn" href="#">Buy Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="review" id="Review">
+        <h1>Customer's<span>review</span></h1>
+        
+        <div class="review_box">
+            <div class="review_card">
+                <div class="card_top">
+                    <div class="profile">
+                        <div class="profile_image">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Customer">
+                        </div>
+                        <div class="name">
+                            <strong>Ranidi Lochana</strong>
+                            <div class="like">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half-stroke"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="comment">
+                    <p>
+                        Great products and fast delivery! I ordered a smartwatch and it arrived within 2 days. The quality is excellent and the price was very reasonable.
+                    </p>
+                </div>
+            </div>   
+
+            <div class="review_card">
+                <div class="card_top">
+                    <div class="profile">
+                        <div class="profile_image">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Customer">
+                        </div>
+                        <div class="name">
+                            <strong>Sayuru Tharanga</strong>
+                            <div class="like">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half-stroke"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="comment">
+                    <p>
+                        The Nike shoes I purchased are comfortable and stylish. Customer service was helpful when I needed to exchange for a different size.
+                    </p>
+                </div>
+            </div>   
+
+            <div class="review_card">
+                <div class="card_top">
+                    <div class="profile">
+                        <div class="profile_image">
+                            <img src="https://randomuser.me/api/portraits/men/22.jpg" alt="Customer">
+                        </div>
+                        <div class="name">
+                            <strong>Senuda Dilwan</strong>
+                            <div class="like">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half-stroke"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="comment">
+                    <p>
+                        The laptop I ordered was good but took longer than expected to arrive. The product itself works well for my needs.
+                    </p>
+                </div>
+            </div>   
+        </div>
+    </div>
+
+    <div class="services" id="Servises">
+        <h1>our<span>services</span></h1>
+
+        <div class="services_cards">
+            <div class="services_box">
+                <i class="fa-solid fa-truck-fast"></i>
+                <h3>Fast Delivery</h3>
+                <p>
+                    We deliver your products within 2-3 business days with tracking.
+                </p>
+            </div>
+
+            <div class="services_box">
+                <i class="fa-solid fa-rotate-left"></i>
+                <h3>10 Days Replacement</h3>
+                <p>
+                    If you're not satisfied, return within 10 days for a full refund.
+                </p>
+            </div>
+
+            <div class="services_box">
+                <i class="fa-solid fa-headset"></i>
+                <h3>24 x 7 Support</h3>
+                <p>
+                    Our customer service team is available around the clock.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
         <div class="footer_main">
             <div class="tag">
                 <h1>Contact</h1>
@@ -1088,7 +330,7 @@ footer .footer_main .tag .search_bar button{
             </div>
 
             <div class="tag">
-                <h1>Follw Us</h1>
+                <h1>Follow Us</h1>
                 <div class="social_link">
                     <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
                     <a href="#"><i class="fa-brands fa-twitter"></i></a>
@@ -1100,12 +342,18 @@ footer .footer_main .tag .search_bar button{
             <div class="tag">
                 <h1>Newsletter</h1>
                 <div class="search_bar">
-                    <input type="text" placeholder="You email id here">
+                    <input type="text" placeholder="Your email id here">
                     <button type="submit">Subscribe</button>
                 </div>
             </div>
-
         </div>
     </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.hamburger').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
